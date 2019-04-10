@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(ComputerController.URL_COUNTRY)
+@RequestMapping(ComputerController.URL_COMPUTER)
 public class ComputerController {
-    public static final String URL_COUNTRY = "/api/v1/country";
+    public static final String URL_COMPUTER = "/api/v1/computers";
     private final ComputerService computerService;
 
     public ComputerController(ComputerService computerService) {
