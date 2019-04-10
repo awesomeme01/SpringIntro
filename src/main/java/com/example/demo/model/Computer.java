@@ -12,12 +12,14 @@ public class Computer {
     private String model;
     private String description;
     private int year;
+    private double price;
 
     public Computer() {
     }
 
-    public Computer(Long id, String brand, String model, String description, int year) {
+    public Computer(String brand, String model, String description, int year, double price) {
         this.id = id;
+        this.price = price;
         this.brand = brand;
         this.model = model;
         this.description = description;
@@ -26,6 +28,14 @@ public class Computer {
 
     public Long getId() {
         return id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getBrand() {
@@ -69,9 +79,10 @@ public class Computer {
         return "Computer{" +
                 "id=" + id +
                 ", brand='" + brand + '\'' +
-                ", com.example.demo.model='" + model + '\'' +
+                ", model='" + model + '\'' +
                 ", description='" + description + '\'' +
                 ", year=" + year +
+                ", price=" + price +
                 '}';
     }
 }
