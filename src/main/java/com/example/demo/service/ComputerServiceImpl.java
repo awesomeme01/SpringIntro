@@ -28,4 +28,15 @@ public class ComputerServiceImpl implements ComputerService {
     public Computer saveComputer(Computer c) {
         return this.computerRepository.save(c);
     }
+
+    @Override
+    public void deleteComputer(Long id) {
+        this.computerRepository.delete(findComputerById(id));
+        System.out.println("Deleted a computer");
+    }
+
+//    @Override
+//    public Computer updateComputer(Long id, Computer c) {
+//        return this.computerRepository.(c);
+//    }
 }
